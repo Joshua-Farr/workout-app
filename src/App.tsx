@@ -9,8 +9,6 @@ function App() {
   pushDay.addExercise({ name: "bench press", muscleGroup: "chest" });
   pushDay.addExercise({ name: "pushups", muscleGroup: "chest" });
 
-  pushDay.getWorkoutHistory();
-
   return <></>;
 }
 
