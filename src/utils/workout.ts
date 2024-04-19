@@ -40,6 +40,7 @@ export class Workout {
 
   addExercise(exercise: Exercise) {
     this.workoutExercises.push(exercise);
+    console.log(`Added ${exercise.exerciseDetails.name} to the workout!`);
   }
 
   getExercises() {
