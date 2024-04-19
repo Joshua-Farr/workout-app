@@ -3,13 +3,12 @@ import { Exercise, DaysOfTheWeek } from "./types";
 export class Workout {
   workoutName: string;
   workoutSchedule: DaysOfTheWeek[];
-  listOfExercises: Exercise[];
-  workoutHistory: Date[];
+  workoutExercises: Exercise[];
+
   constructor(name: string) {
     this.workoutName = name;
-    this.listOfExercises = [];
+    this.workoutExercises = [];
     this.workoutSchedule = [];
-    this.workoutHistory = [];
   }
 
   setWorkoutName(name: string) {
@@ -40,27 +39,27 @@ export class Workout {
   }
 
   addExercise(exercise: Exercise) {
-    this.listOfExercises.push(exercise);
+    this.workoutExercises.push(exercise);
   }
 
   getExercises() {
-    if (!this.listOfExercises.length) {
+    if (!this.workoutExercises.length) {
       console.log(
         `There are no exercises in ${this.workoutName}, please add a workout to get started!`
       );
 
       return -1;
     }
-    return this.listOfExercises;
+    return this.workoutExercises;
   }
 
   getWorkoutHistory() {
-    if (!this.workoutHistory.length) {
+    if (!this.workoutExercises.length) {
       console.log(
         `There is no history for ${this.workoutName}, complete this workout to begin tracking!`
       );
       return -1;
     }
-    return this.workoutHistory;
+    return this.workoutExercises;
   }
 }

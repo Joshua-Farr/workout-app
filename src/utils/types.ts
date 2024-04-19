@@ -1,12 +1,11 @@
-export interface Exercise {
+export interface ExerciseDetails {
   name: string;
   muscleGroup: string;
-  notes?: string;
-  history?: History[];
 }
 
-export interface History {
-  history: Set[];
+export interface Exercise {
+  exerciseDetails: ExerciseDetails;
+  exerciseHistory: Set[];
 }
 
 export interface Set {
